@@ -1,6 +1,8 @@
 const router = require("express").Router();
-const addItem = require("../controllers/todoCrud");
+const { addItem, updateItem, deleteItem } = require("../controllers/todoCrud");
 
-router.post("/add", addItem);
+router.post("/todo", addItem);
+router.patch("/todo/:todoId", updateItem);
+router.delete("/todo/:todoId", deleteItem);
 
 module.exports = router;
