@@ -6,5 +6,5 @@ const todoSchema = new mongoose.Schema({
     requried: true,
   },
 });
-
-module.exports = mongoose.mdoel("Todo", todoSchema);
+const TodoModel = mongoose.model("Todo", todoSchema);
+module.exports = TodoModel;
