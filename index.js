@@ -14,8 +14,8 @@ app.use(express.json());
 
 app.use("/api", todo);
 
-app.get("/home", (req, res) => {
-  res.status(200).send("nigga is home");
+app.get("/", (req, res) => {
+  res.status(200).send("Hello Vercel Deployment");
 });
 
 app.listen(PORT, () => {
