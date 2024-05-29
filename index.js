@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use("/api", todo);
 
-app.get("/", (req, res) => {
+app.get("/api/home", (req, res) => {
   res.status(200).send("Hello Vercel Deployment");
 });
 
