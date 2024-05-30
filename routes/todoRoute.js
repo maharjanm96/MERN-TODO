@@ -3,10 +3,10 @@ const {
   addItem,
   updateItem,
   deleteItem,
-  getAllItems,
+ //  getAllItems,
 } = require("../controllers/todoCrud");
 
-router.get("/todo", getAllItems);
+//router.get("/todo", getAllItems);
 router.post("/todo", addItem);
 router.patch("/todo/:todoId", updateItem);
 router.delete("/todo/:todoId", deleteItem);
