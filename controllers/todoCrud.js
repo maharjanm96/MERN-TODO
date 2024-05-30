@@ -1,14 +1,14 @@
 const TodoModel = require("../models/todoSchema");
 
-// const getAllItems = async (req, res) => {
-//   try {
-//     const allData = await TodoModel.find({});
-//     res.status(200).json({ message: "All todo list", todo: allData });
-//   } catch (error) {
-//     console.error("Something went wrong");
-//     res.status(400).json({ message: "Error Occured", error: error });
-//   }
-// };
+const getAllItems = async (req, res) => {
+  try {
+    const allData = await TodoModel.find({});
+    res.status(200).json({ message: "All todo list", todo: allData });
+  } catch (error) {
+    console.error("Something went wrong");
+    res.status(400).json({ message: "Error Occured", error: error });
+  }
+};
 
 const addItem = async (req, res) => {
   try {
@@ -54,4 +54,4 @@ const deleteItem = async (req, res) => {
   }
 };
 
-module.exports = { addItem, updateItem, deleteItem };
+module.exports = { addItem, updateItem, deleteItem, getAllItems };
